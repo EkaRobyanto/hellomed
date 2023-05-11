@@ -8,6 +8,7 @@ export default function Scientific() {
 	async function getMed() {
 		const res = await fetch('https://methlab.vercel.app/api/obat');
 		const med = await res.json();
+		console.log(med);
 		return med;
 	}
 
