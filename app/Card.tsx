@@ -4,9 +4,10 @@ type Props = {
   img: string;
   title: string;
   href: string;
+  information?: string;
 };
 
-const Card = ({ img, title, href }: Props) => {
+const Card = ({ img, title, href, information }: Props) => {
   return (
     <Link href={href}>
       <div className="relative flex items-center justify-center md:min-w-[550px] sm:min-w-[500px] sm:min-h-[200px] md:h-[300px] rounded-[24px] hover:border-4 border-cYellow cursor-pointer">

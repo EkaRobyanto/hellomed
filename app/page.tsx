@@ -33,7 +33,7 @@ export default function Home() {
             <Card
               title="Obat Tradisional"
               img="/images/tradisional.png"
-              href="/traditional-category"
+              href="/traditional"
             />
             <Card title="Obat Medis" img="/images/medis.png" href="#" />
           </div>
