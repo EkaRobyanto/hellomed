@@ -4,12 +4,16 @@ type Props = {
   img: string;
   title: string;
   href: string;
-  information?: string;
 };
 
-const Card = ({ img, title, href, information }: Props) => {
+const Card = ({ img, title, href }: Props) => {
   return (
-    <Link href={href}>
+    <Link
+      href={{
+        pathname: href,
+        query: { title: title },
+      }}
+    >
       <div className="relative flex items-center justify-center rounded-[24px] hover:border-4 border-cYellow cursor-pointer min-w-[300px] min-h-[200px] md:min-w-[550px] md:h-[300px] ">
         <img
           src={img}

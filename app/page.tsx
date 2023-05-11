@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Card from "@/app/components/Card";
+import Card from "@/app/components/card";
 import Image from "next/image";
 
 export default function Home() {
@@ -38,7 +38,11 @@ export default function Home() {
                 img="/images/tradisional.png"
                 href="/traditional"
               />
-              <Card title="Obat Medis" img="/images/medis.png" href="#" />
+              <Card
+                title="Obat Medis"
+                img="/images/medis.png"
+                href="/scientific"
+              />
             </div>
           </div>
         </section>

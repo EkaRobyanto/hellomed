@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Card from "../components/Card";
+import Card from "../components/card";
 
 const TradionalCategory = () => {
   return (
@@ -12,12 +12,16 @@ const TradionalCategory = () => {
           Kategori Obat Tradisional
         </h1>
         <div className="flex flex-wrap py-5 gap-5">
-          <Card img="/images/etnomedisin.jpg" title="Ethnomedisin" href="#" />
-          <Card img="/images/filologi.jpg" title="Filologi" href="#" />
+          <Card
+            img="/images/etnomedisin.jpg"
+            title="Ethnomedisin"
+            href="/findmed"
+          />
+          <Card img="/images/filologi.jpg" title="Filologi" href="/findmed" />
           <Card
             img="/images/folklore.jpg"
             title="Indigenous Folklore"
-            href="#"
+            href="/findmed"
           />
         </div>
       </div>
