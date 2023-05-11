@@ -2,7 +2,6 @@
 
 import React from "react";
 import Card from "../Card";
-import InformationCard from "./information_card";
 
 const TradionalCategory = () => {
   return (
@@ -21,7 +20,6 @@ const TradionalCategory = () => {
             href="#"
           />
         </div>
-        <InformationCard></InformationCard>
       </div>
     </div>
   );
