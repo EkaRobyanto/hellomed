@@ -8,20 +8,19 @@ export default function MedCard({
 	img?: string;
 }) {
 	return (
-		<div className='card w-96 bg-base-100 shadow-xl'>
+		<div className='card w-96 max-h-96 bg-base-100 shadow-xl'>
 			<figure>
 				<Image
 					src={img ?? '/kekg'}
 					alt={title}
-					width={300}
-					height={300}
+					height={250}
+					width={250}
 				></Image>
 			</figure>
-			<div className='card-body'>
+			<div className='card-body justify-end'>
 				<h2 className='card-title'>{title}</h2>
-				<p>If a dog chews shoes whose shoes does he choose?</p>
-				<div className='card-actions justify-end'>
-					<button className='btn btn-primary'>Buy Now</button>
+				<div className='card-actions'>
+					<button className='btn btn-primary '>Buy Now</button>
 				</div>
 			</div>
 		</div>
