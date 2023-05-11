@@ -7,7 +7,8 @@ type Props = {
 
 const Card = ({ img, title, href }: Props) => {
   return (
-    <div className="relative flex items-center justify-center min-w-[600px] h-[200px] cursor-pointer ">
+    <div
+      className="relative flex items-center justify-center min-w-[600px] h-[200px] cursor-pointer">
       <img
         src={img}
         alt={title}
