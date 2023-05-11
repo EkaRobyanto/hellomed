@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Card from "@/app/Card";
+import Card from "@/app/components/Card";
 import Image from "next/image";
 
 export default function Home() {
