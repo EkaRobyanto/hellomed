@@ -38,7 +38,7 @@ const MedDetail = () => {
   if (!err)
     return (
       <div className="min-h-screen max-w-screen-lg mx-auto">
-        <div className="flex flex-col gap-5 justify-center pt-9 pl-48">
+        <div className="flex flex-col gap-5 justify-center pt-9 ">
           <div className="text-white font-semibold md:text-[30px] h-10 ">
             <span className="text-cYellow font-light">| </span>
             {data!.name}
@@ -50,7 +50,7 @@ const MedDetail = () => {
               width={400}
               height={250}
               quality={100}
-              className="rounded-lg w-[400px] h-[250px] border-white border-2"
+              className="rounded-lg lg:w-[400px] lg:h-[250px] w-[200px] h-[150px]  border-white border-2"
             />
             <div className="flex flex-col gap-2">
               <div className="text-white font-normal md:text-[30px] h-10 ">
