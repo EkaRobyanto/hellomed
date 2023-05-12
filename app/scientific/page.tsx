@@ -1,11 +1,12 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import MedCard from '@/app/components/MedCard';
 import { ScientificMed } from '@/types/types';
 import { useState } from 'react';
+import MedCard from '@/app/components/MedCard';
+import Loading from '../components/loading';
 
-export default function Scientific() {
+export default function Page() {
 	async function getMed() {
 		const res = await fetch('https://methlab.vercel.app/api/obat');
 		const med = await res.json();
@@ -13,9 +14,8 @@ export default function Scientific() {
 	}
 
 	const [query, setQuery] = useState<string>('');
-	console.log(query);
 	const { data, isLoading, error } = useQuery(['medicines'], getMed);
-	if (isLoading) return <div className='text-8xl'>LOADING</div>;
+	if (isLoading) return <Loading />;
 	const { data: medicine }: { data: ScientificMed[] } = data;
 	return (
 		<>
@@ -39,7 +39,14 @@ export default function Scientific() {
 						return element.name.toLowerCase().includes(query.toLowerCase());
 					})
 					.map((element: ScientificMed, index: any) => {
-						return <MedCard title={element.name} img={element.image} />;
+						return (
+							<MedCard
+								key={element.id}
+								id={element.id}
+								title={element.name}
+								img={element.image}
+							/>
+						);
 					})}
 			</div>
 		</>
