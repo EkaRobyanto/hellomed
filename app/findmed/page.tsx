@@ -11,14 +11,14 @@ export default function FindMedicine() {
   const param = useSearchParams();
   const title = param.get("title");
   if (!title) return <div className="text-8xl">kate lapo kon cok</div>;
-  const domain = `${api[title]}api/medicine`;
+  const domain = `${api.get(title)}api/medicine`;
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [err, setErr] = useState("");
 
-  const filtered = data.filter((item) => {
+  const filtered = data.filter((item: MedicineTypes) => {
     return item.name.toLowerCase().includes(query.toLowerCase());
   });
 

@@ -11,12 +11,21 @@ const MedDetail = () => {
   const param = useSearchParams();
   const name = param.get("name");
   const id = param.get("id");
-  const domain = `${api[name]}api/medicine/${id}`;
   if (!name) return <div className="text-8xl">error</div>;
+  const domain = `${api.get(name)}api/medicine/${id}`;
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState<MedicineDetail>();
   const [err, setErr] = useState("");
+
+  function getVal() {
+    let val = api.get(name!);
+    if (!val) {
+      return "";
+    } else {
+      return val;
+    }
+  }
 
   useEffect(() => {
     fetch(domain)
@@ -94,7 +103,7 @@ const MedDetail = () => {
               href={
                 name === "Filologi"
                   ? "https://github.com/r-G7D/ailment_alleviate/releases"
-                  : api[name]
+                  : getVal()
               }
             >
               <span className="text-cYellow font-light cursor-pointer pl-2">
