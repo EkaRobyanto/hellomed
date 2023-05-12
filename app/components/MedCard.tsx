@@ -9,7 +9,7 @@ export default function MedCard({
 }) {
 	return (
 		<div className='card w-96 max-h-96 bg-base-100 shadow-xl'>
-			<figure>
+			<figure className='mt-4'>
 				<Image
 					src={img ?? '/kekg'}
 					alt={title}
