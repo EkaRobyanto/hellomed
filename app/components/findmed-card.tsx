@@ -25,7 +25,7 @@ const FindMedCard = ({ name, image, id, title }: MedicineTypes) => (
         {name}
       </div>
       <div className="mt-8 bg-cYellow border border-black rounded-lg flex flex-row max-w-fit">
-        <div className="mx-3 text-black">Detail Obat</div>
+        <div className="mx-3 text-black text-[15px] lg:text-[17px]">Detail Obat</div>
         <div className="mx-3 text-black font-bold ">></div>
       </div>
     </div>
