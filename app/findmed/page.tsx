@@ -10,7 +10,7 @@ export default function FindMedicine() {
   const param = useSearchParams();
   const title = param.get("title");
   if (!title) return <div className="text-8xl">kate lapo kon cok</div>;
-  const domain = api[title];
+  const domain = `${api[title]}api/medicine`;
 
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -39,7 +39,7 @@ export default function FindMedicine() {
 
   if (!err)
     return (
-      <div className="min-h-screen max-w-screen-xl mx-auto">
+      <div className="min-h-screen max-w-screen-xl mx-auto bg-transparent">
         <div className="flex flex-row gap-5 justify-center pt-9">
           <div className="p-2.5 text-sm font-medium text-white bg-cYellow rounded-lg w-10 h-10">
             <svg
@@ -72,15 +72,29 @@ export default function FindMedicine() {
           </div>
         </div>
         <div className="flex flex-wrap gap-5 pt-10 justify-center">
-          {filtered.map((element: MedicineTypes, index: any) => {
-            return (
-              <FindMedCard
-                name={element.name}
-                image={element.image}
-                id={element.id}
+          {filtered.length === 0 && query !== "" ? (
+            <div className="flex flex-col gap-3">
+              <img
+                src="images/mednotfound.png"
+                className="w-[220px] h-[350px] self-center"
               />
-            );
-          })}
+              <div className="w-[40%] text-lg text-white text-center  self-center">
+                Sepertinya kami tidak dapat menemukan obat dengan kata kunci
+                anda, coba cek kembali kata kunci yang anda masukan
+              </div>
+            </div>
+          ) : (
+            filtered.map((element: MedicineTypes, index: any) => {
+              return (
+                <FindMedCard
+                  name={element.name}
+                  image={element.image}
+                  id={element.id}
+                  title={title}
+                />
+              );
+            })
+          )}
         </div>
       </div>
     );
