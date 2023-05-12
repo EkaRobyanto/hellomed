@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { id: string } }) {
 		<>
 			<div className='m-10'>
 				<div className='text-4xl font-bold'>🟨{data?.name}</div>
-				<div className='flex gap-4 p-5 items-center'>
+				<div className='md:flex gap-4 p-5 items-center'>
 					<Image
 						className='flex-initial '
 						src={data?.image}

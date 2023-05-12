@@ -11,7 +11,7 @@ export default function MedCard({
 	id: number;
 }) {
 	return (
-		<div className='card w-96 max-h-96 bg-base-100 shadow-xl'>
+		<div className='card w-96 max-h-96 bg-stone-950 shadow-xl border-cYellow border'>
 			<figure className='mt-4'>
 				<Image
 					src={img ?? '/kekg'}
@@ -24,7 +24,9 @@ export default function MedCard({
 				<h2 className='card-title'>{title}</h2>
 				<div className='card-actions'>
 					<Link href={`scientific/${id}`}>
-						<button className='btn btn-primary '>Buy Now</button>
+						<button className='btn bg-cYellow text-white hover:bg-zinc-600 '>
+							Buy Now
+						</button>
 					</Link>
 				</div>
 			</div>
