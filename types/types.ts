@@ -11,5 +11,5 @@ export type MedicineTypes = {
 	id:number;
 	name:string;
 	image:string;
-	description:string;
+	description?:string;
 }
