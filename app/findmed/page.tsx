@@ -4,6 +4,7 @@ import { MedicineTypes } from "@/types/types";
 import { api } from "../util/api";
 import { useEffect, useState } from "react";
 import Loading from "../components/loading";
+import Image from "next/image";
 import FindMedCard from "../components/findmed-card";
 
 export default function FindMedicine() {
@@ -74,8 +75,9 @@ export default function FindMedicine() {
         <div className="flex flex-wrap gap-5 pt-10 justify-center">
           {filtered.length === 0 && query !== "" ? (
             <div className="flex flex-col gap-3">
-              <img
+              <Image
                 src="images/mednotfound.png"
+                alt="not found"
                 className="w-[220px] h-[350px] self-center"
               />
               <div className="w-[40%] text-lg text-white text-center  self-center">
