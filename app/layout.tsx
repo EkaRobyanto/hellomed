@@ -1,7 +1,9 @@
+"use client";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import Providers from "./util/providers";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} bg-black`}>
-        <Logo />
-        {children}
+        <Providers>
+          <Logo />
+          {children}
+        </Providers>
       </body>
     </html>
   );

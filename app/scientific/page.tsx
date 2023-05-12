@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import MedCard from '@/app/scientific/MedCard';
+import MedCard from '@/app/components/MedCard';
 import { ScientificMed } from '@/types/types';
 import { useState } from 'react';
 

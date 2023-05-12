@@ -6,3 +6,10 @@ export type ScientificMed = {
 	activeIngredient: string;
 	image: string;
 };
+
+export type MedicineTypes = {
+	id:number;
+	name:string;
+	image:string;
+	description:string;
+}
